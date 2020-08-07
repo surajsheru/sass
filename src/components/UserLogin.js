@@ -50,56 +50,64 @@ function UserLogin(props) {
     {props.LUser.utype==="p"?<Redirect to={
         {          
             pathname: "/Principal",
-            state: { ltype:"p"  }
+            state: { ltype:"p" ,
+            user:props.LUser }
           
         }
     }></Redirect>:
     props.LUser.utype==='hod'?<Redirect to={
         {          
             pathname: "/Hod",
-            state: { ltype:"hod"  }
+            state: { ltype:"hod",
+            user:props.LUser   }
           
         }
     }></Redirect>:
     props.LUser.utype==='f'?<Redirect to={
         {          
             pathname: "/Faculty",
-            state: { ltype:"f"  }
+            state: { ltype:"f",
+            user:props.LUser   }
           
         }
     }></Redirect>:
     props.LUser.utype==='ex'?<Redirect to={
         {          
             pathname: "/Esection",
-            state: { ltype:"ex"  }
+            state: { ltype:"ex",
+            user:props.LUser   }
           
         }
     }></Redirect>:
     props.LUser.utype==='as'?<Redirect to={
         {          
             pathname: "/Asection",
-            state: { ltype:"as"  }
+            state: { ltype:"as" ,
+            user:props.LUser  }
           
         }
     }></Redirect>:
     props.LUser.utype==='ao'?<Redirect to={
         {          
             pathname: "/Ao",
-            state: { ltype:"ao"  }
+            state: { ltype:"ao" ,
+            user:props.LUser  }
           
         }
     }></Redirect>:
     props.LUser.utype==='o'?<Redirect to={
         {          
             pathname: "/Office",
-            state: { ltype:"o"  }
+            state: { ltype:"o",
+            user:props.LUser   }
           
         }
     }></Redirect>:
     props.LUser.utype==='stu'?<Redirect to={
         {          
             pathname: "/Student",
-            state: { ltype:"stu"  }
+            state: { ltype:"stu",
+            user:props.LUser   }
           
         }
     }></Redirect>:

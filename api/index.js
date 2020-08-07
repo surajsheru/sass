@@ -13,7 +13,7 @@ app.use(cors(corsOptions))
 const db = require('./config/db.config');
   
 // force: true will drop the table if it already exists
-db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync({force: false}).then(() => {
   console.log('Drop and Resync with { force: true }');
 });
  

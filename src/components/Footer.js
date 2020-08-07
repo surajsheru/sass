@@ -5,7 +5,7 @@ function Footer() {
     return (
         <>
          <div>&copy;  <a href="#" style={{color:"red"}}>SASS</a> </div> 
-         <p style={{color:"white"}}></p>{y}</>  
+         <p style={{color:"white"}}></p></>  
         
     )
 }

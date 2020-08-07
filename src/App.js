@@ -19,7 +19,7 @@ import AsectionDashBoard from './components/Asection/AsectionDashBoard';
 function App() {
   return (
     <div className="container-lg">
-    <div className="App">
+    <div className="App container">
     
 {/* <UserReg/>
 <UserLogin/> */}

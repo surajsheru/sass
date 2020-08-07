@@ -3,9 +3,10 @@ const Emp_Info=db.Emp_Info
 let bcrypt=require('bcryptjs');
 const { Op } = require('sequelize');
 //creae a user post a user
+
 exports.create = (req, res) => {  
     // Save Employee  to MySQL database
-   
+  
     const emp={
         empid:req.body.empid,
         empname:req.body.empname,
@@ -49,6 +50,7 @@ Emp_Info.findOrCreate({
      })
     .then(nuser=>{
       res.send(nuser)
+      
     })
     .catch(err => {
       res.status(500).send("Error -> " + err);
@@ -63,19 +65,20 @@ Emp_Info.findOrCreate({
     }).catch(err => {
       res.status(500).send("Error -> " + err);
     })
-  };
+  }
 
-  // Find a emp by shaort name
+ // Find a emp by shaort name
 exports.findByname = (req, res) => {  
-    const emp={
-        empsname:req.body.empsname
-    }
+    
+        const empname=req.params.empname
+    console.log(empname)
       Emp_Info.findOne({ 
         where:{
-         empsname:emp.empsname}
+         empid:empname}
        })
       .then(nuser=>{
         res.send(nuser)
+        
       })
       .catch(err => {
         res.status(500).send("Error -> " + err);
@@ -83,7 +86,7 @@ exports.findByname = (req, res) => {
       
   };
    
-  
+
   // Update a User
   exports.update = (req, res) => {
     var user = req.body;

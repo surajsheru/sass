@@ -10,7 +10,7 @@ module.exports = function(app) {
     app.get('/emps', Emp_Info.findAll);
  
     // Retrieve a single user by Id
-    app.get('/empsname', Emp_Info.findByname);
+    app.post('/empname/:empname', Emp_Info.findByname);
    
     // Update a user with Id
     app.put('/emp/:empid', Emp_Info.update);
